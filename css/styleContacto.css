@@ -1,0 +1,731 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    font-family: 'Raleway', sans-serif;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+  /* HEADER */
+
+
+
+  nav a {
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+    padding: 0.5rem;
+}
+
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0em;
+    height: 0em;
+    background-color: gainsboro;
+    border-radius: 0%;
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+    top: calc(50% - 0.6em / 2);
+}
+
+nav a::before {left: 0; z-index: -1;}
+nav a::after {right: 0; z-index: -2;}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    width: 120%;
+    height: 110%;
+    border-radius: 0;
+    background-color: dodgerblue;
+}
+
+nav a:hover::before {
+    top: 0;
+}
+
+nav a:hover::after {
+    right: -0.4em;
+    filter: brightness(0.8);
+}
+  nav {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    top: 0;
+    color: rgb(49,128,183);
+    letter-spacing: 1px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh;
+    padding: 3vh 3% 3vh 3%;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0px 4px 4px rgba(19, 20, 20, 0.6);
+    max-width: 100vw;
+  }
+  nav img{
+    height: 5vh;
+}
+#CONTACTO{
+  font-weight: 700;
+}
+  nav > ul {
+    display: flex;
+    justify-content: space-around;
+    width: clamp(700px,40%,40%);
+    min-width: 500px;
+    font-size: 1.8rem;
+    align-items: center;
+   
+  }
+  nav ul button {
+    text-decoration: none;
+  }
+
+
+  .burger div {
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .toggle .line2 {
+    opacity: 0;
+  }
+  
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* --------------Banner IMG ----------------- */
+
+  .mainImg{
+    display: flex;
+    background-size : cover;
+    height: 86vh;
+    margin-top: 14vh;
+  }
+  
+  .mainImg .izq{
+      background-color: rgb(50,128,187);
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .mainImg .der{
+    background: url(../img/b374a6ca-49ad-4d0d-ad6a-cd5b1975dfb9.jpg) no-repeat center top;
+    background-size: cover ;
+    width: 50vw;
+    height: 100%;
+}
+  .mainImg .banner{
+    background-color: rgb(35, 80, 114);
+    opacity: 70%;
+    width: 18vw;
+    height: 100%;
+  
+   
+  }
+
+.title {
+    margin: auto;
+
+}
+  .mainImg .line{
+    height: 2px;
+    width: 100px;
+    background-color: white;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 3px;
+    
+    
+    
+  }
+  h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 8rem;
+    line-height: 8rem;
+    
+  
+  }
+
+  
+.mainImg button{
+  padding: 2rem;
+}
+.mainImg .container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: fit-content;
+ position: absolute;
+ bottom: 5%;
+ /* position the top  edge of the element at the middle of the parent */
+ left: 50%; /* position the left edge of the element at the middle of the parent */
+
+ transform: translateY(-50%); /* This is a shorthand of
+                                      translateX(-50%) and translateY(-50%) */
+ padding-bottom: 8rem;
+}
+
+.mainImg .chevron {
+  position: absolute;
+  width:calc(1rem * 3.5);
+  height: calc(1rem * 0.8);
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 50%;
+ background: white;
+}
+
+.chevron:before {
+ left: 0;
+ transform: skewY(30deg);
+}
+
+.chevron:after {
+ right: 0;
+ width: 50%;
+ transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+ 25% {
+  opacity: 1;
+	}
+ 33.3% {
+  opacity: 1;
+  transform: translateY(calc(1rem * 3.8));
+ }
+ 66.6% {
+  opacity: 1;
+  transform: translateY(calc(1rem* 5.2));
+ }
+ 100% {
+  opacity: 0;
+  transform: translateY(calc(1rem * 8)) scale(0.5);
+ }
+}
+
+/* ---------------------MAIN-------------- */
+.gridMain{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 80vh;
+  grid-template-areas:
+  "one two ";
+  padding: 5vh 10vw;
+  margin-top: 5vh;
+  margin-bottom: 10rem;
+
+
+
+}
+
+.gridMain .uno{
+  grid-area: one;
+   display: flex;
+   font-size: 2.2rem;
+   line-height: 2.8rem;
+
+  
+
+}
+.gridMain .contacto1{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-left: 5vw;
+  min-height: fit-content;
+}
+
+.gridMain .contacto1 >div{
+  margin-bottom: 5rem;
+}
+.gridMain h5 {
+  font-size: 3.8rem;
+  margin-bottom: 1.8rem;
+  line-height: 4.3rem;
+  font-weight: 600;
+}
+
+
+.gridMain .dos{
+  grid-area: two;
+  font-size: 2rem;
+  
+}
+/* --------------FORM-------------- */
+form {
+  max-width: 550px;
+  padding: 2rem;
+  margin: 0 auto;
+  padding-top: 0%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid black;
+  font-size: 1.6rem;
+}
+input[type=submit] {
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  align-self: flex-start;
+  width: clamp(150px, 25%, 25%);
+}
+
+label, small {
+  font-size: small;
+  
+}
+
+::placeholder{
+  color: black;
+  opacity: 1;
+}
+form .flex{
+  display: flex;
+  justify-content: end;
+}
+.flex {
+  padding-top: 2rem;
+}
+.flex input{
+  padding: 1.5rem 1rem;
+  border-radius: 3rem;
+  font-size: 2rem;
+  background-color: rgb(50,128,187);
+  border: 0ch;
+  color: white;
+  font-weight: 700;
+}
+
+.list{
+  padding-top: 2rem;
+}
+
+fieldset {
+  border: 1px solid blue;
+  width: 360px;
+}
+
+legend, label{
+  color: blue; 
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+
+datalist {
+  position: absolute;
+  background-color: white;
+  border: 1px solid blue;
+  border-top: none;
+  width: fit-content;
+  padding: 5px;
+  max-height: 20rem;
+  overflow-y: auto
+  
+}
+
+option {
+  background-color: white;
+  padding: 4px;
+  color: blue;
+  margin-bottom: 1px;
+   font-size: 18px;
+  cursor: pointer;
+}
+
+option:hover,  .active{
+  background-color: lightblue;
+}
+
+ 
+
+
+
+   
+
+
+
+  
+
+
+
+  /* ------- FOOTER------------- */
+
+
+  footer{
+    background-color: rgb(65,64,66);
+    display: grid;
+    grid-template-columns: 0.9fr 1fr 1fr;
+    grid-template-rows: 300px;
+    justify-content:end ;
+    align-content: space-around;
+    height: 400px;
+    color: white;
+    font-size: 1.4rem;
+}
+/* footer section {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} */
+footer section{
+  font-size: 1.8rem;
+}
+footer  section h5{
+  font-size: 1.85rem;
+}
+footer section div{
+  display: flex;
+  flex-direction: column;
+}
+footer .menu{
+    /* padding: 10% 5% 10% clamp(10px,20%,20%);
+    padding-bottom: clamp(10px,10vh,10vh);
+    min-width:fit-content; */
+    font-weight:600;
+    font-size: 1.9rem;
+    line-height: 3.2rem;
+    margin: auto;
+}
+
+
+
+footer .contacto1{
+  display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 5vw;
+    
+
+}
+footer .planta{
+  transform: translateY(-70%);
+}
+
+.contacto2{
+  
+  margin-left: 8%;
+  height: 80%;
+}
+
+#mailfoo{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vh;
+}
+.logoyredes div{
+  margin: auto;
+  position: relative;
+  top: -25%;
+  left: 4%;
+}
+.logoyredes div a{
+  margin-right: 5px;
+}
+
+footer .logo #logoblanco {
+  height: 50px;
+  margin-top: -10%;
+  
+}
+footer .logo{
+  margin-left: 0;
+  margin-top: -10%;
+}
+
+.contacto2{
+  margin: 0;
+  display: flex;
+  justify-content:space-between;
+    flex-direction: column;
+    
+    padding-left: 0vw;
+    
+}
+
+
+
+
+
+ /* ----------MEDIA QUERY------------- */
+ @media (max-width: 1200px) {
+  nav button {
+      font-size: 1.4rem;
+  }
+  .redes img{
+      height: 20px;
+  }
+  .gridMain .uno{
+    grid-area: one;
+     display: flex;
+     font-size: 2rem;
+     line-height: 2.2rem;
+  
+    
+  
+  }
+  footer .menu{
+    display: none;
+   }
+   footer{
+    background-color: rgb(65,64,66);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    justify-content:end ;
+    align-content: space-around;
+    height: 500px;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .gridMain{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: auto;
+    grid-template-areas:
+    "one two ";
+    padding: 5vh 4vw;
+    margin-top: 5vh;
+    margin-bottom: 10rem;
+  
+  
+  
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  body > * {
+      max-width: 100vw;
+  }
+.links {
+    min-width: 0;
+  }
+  nav h1 {
+    font-size: 2rem;
+  }
+.links {
+    position: absolute;
+    right: 0;
+    top: 14vh;
+    height: 90vh;
+    padding-bottom: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    box-shadow: 0px 7px 7px rgba(19, 20, 20, 0.6);
+    align-content: center;
+    font-size: 1.8rem;
+  }
+  .links li {
+    opacity: 0;
+    align-self: center;
+    font-size: 1.6rem;
+  }
+  .burger {
+    display: block;
+  }
+
+
+  footer .atencion{
+    padding: 10% 5% 10% clamp(10px,5vh,5vh);
+    padding-bottom: clamp(10px,5vh,10px);
+}
+
+/* --------------Banner IMG ----------------- */
+
+.mainImg{
+  height: 40vh;
+  
+  margin-top: 14vh;
+  }
+  
+    
+  
+  .mainImg .banner{
+    
+    height: 40vh;
+    width: 65vw;
+    display: flex;
+   
+  }
+  
+  .title{
+    margin-top: 10vh;
+  }
+  .title h1{
+    font-size: 3.4rem;
+    line-height:3.4rem;
+    margin-left:2rem;
+  }
+  .mainImg .line{
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    margin-left: 2.3rem;
+    
+    
+    
+  }
+
+/* -------------- cont items -------------- */
+
+.gridMain{
+  display: grid;
+  grid-template-columns: 100%;
+  height: auto;
+  grid-template-areas:
+  "two "
+  "one";
+  padding: 5vh 10vw;
+  margin-top: 5vh;
+  margin-bottom: 10rem;
+
+
+
+}
+.gridMain .uno{
+  margin-top: 5rem;
+  grid-area: one;
+   display: flex;
+   font-size: 1.8rem;
+   line-height: rem;
+
+  
+
+}
+
+footer{
+  background-color: rgb(65,64,66);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 180px;
+  justify-content:end ;
+  align-content: space-around;
+  height: 220px;
+  color: white;
+  font-size: 1.2rem;
+}
+footer .contacto1 h5{
+  font-size: 1rem;
+}
+footer .contacto1 span{
+  font-size: 0.8rem;
+}
+
+footer .contacto2 h5{
+  font-size: 1rem;
+}
+footer .contacto2 span{
+  font-size: 0.8rem;
+}
+footer .logo #logoblanco{
+  height: 17px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translatex(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes one {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}

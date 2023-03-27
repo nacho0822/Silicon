@@ -1,0 +1,47 @@
+.glide__arrow {
+  position: absolute;
+  display: block;
+  top: 40%;
+  z-index: 1;
+  color: black;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  border-radius: 4px;
+
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-10%);
+  line-height: 1;
+  font-size: 2rem;
+}
+.glide__arrow:focus {
+  outline: none;
+}
+.glide__arrow:hover {
+  border-color: white;
+}
+.glide__arrow--left {
+  left: 2em;
+}
+.glide__arrow--right {
+  right: 2em;
+}
+.glide__arrow--disabled {
+  opacity: 0.33;
+}
+
+
+
+.glide--swipeable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+/*# sourceMappingURL=glide.theme.css.map */

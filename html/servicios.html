@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styleServicios.css" />
+    <link rel="stylesheet" href="../css/glide.core.css">
+    <link rel="stylesheet" href="../css/glide.theme.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <Img src="../img/download.jpg" alt=""></Img>
+        </div>
+        <ul class="links">
+          <a href="index.html">
+              <li><button type="button" id="INICIO">INICIO</button></li>
+          </a>
+          <a href="silicona.html">
+              <li><button type="button" id="SILICONA">SILICONA</button></li>
+          </a>
+          <li>
+            <a href="productos.html"><button type="button" id="PRODUCTOS">PRODUCTOS</button></a>
+          </li>
+          <li id="boton">
+            <a id="SERVICIOS" href="servicios.html" >
+              <button type="button" id="presupuesto">
+                SERVICIOS
+              </button>
+            </a>
+          </li>
+          <li id="boton">
+            <a href="contacto.html" >
+              <button type="button" id="CONTACTO">
+                CONTACTO
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+<main>
+<section class="mainImg">
+  <section class="izq">
+    <div class="title">
+      <h1>Servicios</h1>
+      <div class="line"></div>
+    </div>
+  </section>
+    <section class="der">
+      <div class="banner">
+      </div>
+    </section>
+    
+  </div>
+    <button class="container">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </button>
+</section>
+<section class="profarm">
+    <div>
+      <h3>Siliconado de envases de productos
+        farmacéuticos</h3>
+      <p>La mayoría de los componentes de empaque de productos farmacéuticos (frascos
+        de vidrio, carpules, ampollas, jeringas, tapas y émbolos de goma) requieren el siliconado y posterior tratamiento térmico con el objeto de mejorar su utilización y
+        función.</p>
+      <p>El siliconado se efectúa con emulsiones de silicona USP (dimetilpolisiloxano) a altas
+        temperaturas, lo cual forma un film invisible en los diferentes envases, que permite
+        que el contenido de los mismos (líquidos viscosos, anestésicos, inyectables) fluyan
+        totalmente de las paredes del frasco, ampolla, carpul.
+        </p>
+    </div>
+</section>
+<section class="ventajas">
+  <h3>Ventajas del siliconado</h3>
+  <ul>
+    <li>- Mejor drenaje de las soluciones de los viales, productos en suspensión, inyectables, anestésicos, etc.</li>
+    <li>- Incremento de la productividad en procesos productivos donde intervienen discos y/o tapones de goma.</li>
+    <li>- Incremento del deslizamiento de émbolos en jeringas de vidrio y/o plástico.</li>
+  </ul>
+</section>
+<section class="imgs">
+ <div class="izq"></div>
+ <div class="cen"></div>
+ <div class="der"></div>
+ 
+</section>
+  
+
+
+
+</main>
+<footer>
+  <section class="menu">
+     <ul>
+      <a href="index.html">
+        <li>INICIO</li>
+      </a>
+      <a href="silicona.html">
+        <li>SILICONA</li>
+      </a>
+      <a href="productos.html">
+        <li>PRODUCTOS</li>
+      </a>
+      <a href="servicios.html">
+        <li>SERVICIOS</li>
+      </a>
+      <a href="contacto.html">
+        <li>CONTACTO</li>
+      </a>
+     </ul>
+  </section>
+  <section class="contacto1">
+      <div>
+        <h5>Administración y ventas</h5>
+        <span>Arregui 2495, C1417DJE,</span>
+        <span>Buenos Aires, Argentina</span>
+        <span>ventas@siliconargentinasrl.com.ar</span>
+        
+      </div>
+      <div class="planta">
+        <h5>Planta</h5>
+        <span>Gral. J. G. de Artigas 2633, C1417DJE</span>
+        <span>Buenos Aires, Argentina</span>
+        <span>(54 11) 4582-4994 I 4582-7575</span>
+        
+      </div>
+    </section>
+      <section class="contacto2">
+        <div>
+          <h5>Planta, administración y ventas San Justo</h5>
+          <span>Argentinqa 3950, San Justo</span>
+          <span>Buenos Aires, Argentina</span>
+          <span>(54 11) 4441-3517 I 4441-3544</span>
+        </div>
+        <section class="logo">
+          <img id="logoblanco" src="../img/download.jpg" alt="">
+      </section>
+        
+ 
+</footer>
+
+      <script type="text/javascript" src="../js/appServ.js"></script>
+      <script src="../node_modules/@glidejs/glide/dist/glide.js"></script>
+    <script>
+       const config ={
+            type: 'carousel',
+            perView: 5,
+            breakpoints:{
+                800: {
+                    perView:1
+                },
+                1200: {
+                    perView:2
+                }
+                }
+            }
+        new Glide('.glide',config).mount()
+    </script>
+</body>
+</html>
