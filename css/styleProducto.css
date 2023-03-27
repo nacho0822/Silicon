@@ -744,7 +744,40 @@ justify-content:space-between;
     display: block;
   }
 
-
+  .mainImg{
+    height: 50vh;
+    
+    margin-top: 14vh;
+    }
+    
+      .mainImg .container{
+        display: none;
+      }
+    
+    .mainImg .banner{
+      
+      height: 50vh;
+      width: 65vw;
+      display: flex;
+     
+    }
+    
+    .title{
+      margin-top: 10vh;
+    }
+    .title h1{
+      font-size: 3.4rem;
+      line-height:3.4rem;
+      margin-left:2rem;
+    }
+    .mainImg .line{
+      margin-top: 2vh;
+      margin-bottom: 3vh;
+      margin-left: 2.3rem;
+      
+      
+      
+    }
   
 
 /* --------------Banner IMG ----------------- */
@@ -813,7 +846,7 @@ display: block;
 .card p{
   font-size: 1rem;
 }
-.mainImg{
+/* .mainImg{
   background: url(../img/imgnuestraempresa.jpg) no-repeat cover ; 
 background-size : cover;
 height: 50vh;
@@ -839,7 +872,7 @@ margin-bottom: 20vh;
 .mainImg .container{
   bottom: 50%;
   display: none;
-}
+} */
 
 .title{
   margin-top: 10vh;
