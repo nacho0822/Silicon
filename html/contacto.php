@@ -73,7 +73,7 @@ if (array_key_exists('email', $_POST)) {
         Email: {$_POST['email']}
         Nombre: {$_POST['name']}
         Apellido: {$_POST['last_name']}
-        Telefono: {$_POST['phone']}
+        Telefono: {$_POST['telephone']}
         Mensaje: {$_POST['message']}
         EOT;
         //Send the message, check for errors
@@ -88,6 +88,7 @@ if (array_key_exists('email', $_POST)) {
     } else {
         $msg = 'Email invalido, chequee el formato de su mail.';
     }
+   
 }
 ?>
 
@@ -192,7 +193,7 @@ if (array_key_exists('email', $_POST)) {
       
 <section class="form dos">
     
-        <form action="../php/email2.php" method="post" name="contactform">
+        <form  method="post" name="contactform">
 
         <input maxlength="50" name="name" id="first" size="30" type="text" required placeholder="NOMBRE"  /></p>
            
@@ -223,8 +224,10 @@ if (array_key_exists('email', $_POST)) {
         <textarea cols="25"  id="msg" name="message" rows="6" required placeholder="MENSAJE" ></textarea></p>
          
         
-        <p class="flex"><input type="submit" value="ENVIAR" /></p>
-        <h1><?php echo "Hello World" ?></h1>
+        
+        
+        <p class="flex"><input   type="submit" value="ENVIAR" /></p>
+        <h4 ><?php echo $msg ?></h4>
          
         </form>
           
@@ -288,21 +291,11 @@ if (array_key_exists('email', $_POST)) {
 </footer>
 
       <script type="text/javascript" src="../js/appCon.js"></script>
-      <script src="../node_modules/@glidejs/glide/dist/glide.js"></script>
+      
+    
+
     <script>
-       const config ={
-            type: 'carousel',
-            perView: 5,
-            breakpoints:{
-                800: {
-                    perView:1
-                },
-                1200: {
-                    perView:2
-                }
-                }
-            }
-        new Glide('.glide',config).mount()
-    </script>
+
+</script>
 </body>
 </html>
